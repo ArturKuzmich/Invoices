@@ -1,0 +1,21 @@
+.invoice_content{
+  width: 90%;
+  margin: 0 auto;
+  .invoices_actions{
+    padding: 20px;
+    background: #ffffff;
+    margin: 0 0 50px 0;
+    .actions_title{
+      color: #777877;
+      margin: 0 0 10px 0;
+    }
+    .actions_row-list{
+      .bnt_actions{
+        background: #4973ff;
+        padding: 8px 30px;
+        color: white;
+        text-align: center;
+      }
+    }
+  }
+}
