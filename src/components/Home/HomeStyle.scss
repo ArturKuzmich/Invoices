@@ -1,16 +1,17 @@
 .invoice_content{
-  width: 90%;
-  margin: 0 auto;
+
   .invoices_actions{
     padding: 20px;
     background: #ffffff;
     margin: 0 0 50px 0;
     .actions_title{
       color: #777877;
+      font-size: 22px;
+      line-height: 31px;
       margin: 0 0 10px 0;
     }
     .actions_row-list{
-      .bnt_actions{
+      .link_actions{
         background: #4973ff;
         padding: 8px 30px;
         color: white;

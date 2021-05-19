@@ -1,0 +1,23 @@
+.create_invoice{
+  background: #fefefe;
+  padding: 20px;
+  .create_form{
+    border: 1px solid #eaeaea;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    .create_vis{
+      width: 48%;
+      .input_field{
+        display: flex;
+        flex-direction: column;
+      }
+      &.vis_l{
+
+      }
+      &.vis_r{
+
+      }
+    }
+  }
+}

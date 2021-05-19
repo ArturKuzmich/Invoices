@@ -1,5 +1,10 @@
 @import "public/css/clear";
-
-.App{
+body{
   background: #f1f3f6;
+}
+.App{
+  .app_inner{
+    width: 90%;
+    margin: 0 auto;
+  }
 }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './HomeStyle.scss';
 import InvoicesList from "../InvoicesList/InvoicesList";
+import {Link} from "react-router-dom";
 
 
 const Home = () => {
@@ -30,9 +31,9 @@ const Home = () => {
             <div className="invoices_actions">
                 <h4 className="actions_title">Actions</h4>
                 <div className="actions_row-list">
-                    <button className="bnt_actions">
+                    <Link to="/create" className="link_actions">
                         Add new
-                    </button>
+                    </Link>
                 </div>
             </div>
             {load && <div>...Loading</div>}
