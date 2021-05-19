@@ -5,18 +5,25 @@ import InvoicesList from "../InvoicesList/InvoicesList";
 
 const Home = () => {
     const [invoices, setInvoices] = useState(null);
+    const [load, setLoad] = useState(true)
 
     const handleDelete = (id) => {
         const newInvoices = invoices.filter(invoice => invoice._id !== id);
         setInvoices(newInvoices);
     }
     useEffect(() => {
-        fetch(`http://localhost:8000/invoices`)
-            .then(response => {
-               return  response.json()
-            }).then(data => {
-            setInvoices(data)
-        })
+            fetch(`http://localhost:8000/invoices`)
+                .then(response => {
+                    if(!response.ok){
+                        throw Error
+                    }
+                    return  response.json()
+                }).then(data => {
+                setInvoices(data)
+                setLoad(false)
+            }).catch(err => {
+                console.log(err.message)
+            })
     },[])
     return (
         <div className="invoice_content">
@@ -28,7 +35,8 @@ const Home = () => {
                     </button>
                 </div>
             </div>
-           <InvoicesList invoices={invoices}  handleDelete={handleDelete} />
+            {load && <div>...Loading</div>}
+            {invoices && <InvoicesList invoices={invoices} handleDelete={handleDelete}/>}
         </div>
     )
 }
