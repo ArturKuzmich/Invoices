@@ -4,7 +4,7 @@ import InvoicesList from "../InvoicesList/InvoicesList";
 
 
 const Home = () => {
-    const [invoces, setInvoices] = useState(
+    const [invoices, setInvoices] = useState(
         [
              {
              "_id": "5ba37c48185c0c98e6880bed",
@@ -79,9 +79,12 @@ const Home = () => {
                  }
             ]);
 
+    const handleDelete = (id) => {
+
+    }
     return (
         <div>
-           <InvoicesList invoces={invoces}  />
+           <InvoicesList invoices={invoices}  handleDelete={handleDelete} />
         </div>
     )
 }

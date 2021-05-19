@@ -1,16 +1,16 @@
 import React from 'react';
 import './InvoicesListStyle.scss';
+import PropTypes from 'prop-types';
 
-
-const InvoicesList = ( { invoces } ) => {
-    console.log(invoces)
+const InvoicesList = ( { invoices, handleDelete } ) => {
     return (
        <div className='invoice_list-preview'>
-           {invoces.map(({_id, comment, data_created, date_supplied, number}) => {
+           {invoices.map(({ _id, comment, data_created, date_supplied, number }) => {
                return(
-                   <div key={_id}>
-                       {_id}
-                       {comment}
+                   <div className="list_view" key={_id} >
+                       <div className="view_inner">
+                           {comment}
+                       </div>
                    </div>
                )
            })}
@@ -18,4 +18,10 @@ const InvoicesList = ( { invoces } ) => {
     )
 }
 
-export default InvoicesList
+export default InvoicesList;
+
+InvoicesList.propTypes = {
+    invoices: PropTypes.array,
+    handleDelete: PropTypes.func
+
+}
