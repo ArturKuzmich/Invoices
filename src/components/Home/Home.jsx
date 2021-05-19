@@ -80,7 +80,8 @@ const Home = () => {
             ]);
 
     const handleDelete = (id) => {
-
+        const newInvoices = invoices.filter(invoice => invoice._id !== id);
+        setInvoices(newInvoices);
     }
     return (
         <div>
