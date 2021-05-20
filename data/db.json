@@ -1,20 +1,6 @@
 {
   "invoices": [
     {
-      "_id": "5ba37c48185c0c98e6880bed",
-      "number": 63805,
-      "date_created": "23-11-2015",
-      "date_supplied": "20-06-2016",
-      "comment": "ad do labore nisi qui dolore Lorem sint tempor velit"
-    },
-    {
-      "_id": "5ba37c486790868e50ae1d80",
-      "number": 60568,
-      "date_created": "11-07-2017",
-      "date_supplied": "10-12-2016",
-      "comment": "labore eu cupidatat nisi mollit ex laboris ut aliquip deserunt"
-    },
-    {
       "_id": "5ba37c482a821da190f890a3",
       "number": 23596,
       "date_created": "22-08-2016",
@@ -69,13 +55,6 @@
       "date_created": "30-01-2018",
       "date_supplied": "05-06-2016",
       "comment": "incididunt esse amet reprehenderit in exercitation in incididunt exercitation aliqua"
-    },
-    {
-      "comment": "123",
-      "number": "123",
-      "date_supplied": "2021-05-18",
-      "date_created": "2021-05-04",
-      "_id": "2WCdUk5"
     },
     {
       "comment": "some comment",
