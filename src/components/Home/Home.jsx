@@ -2,30 +2,12 @@ import React, { useState, useEffect } from 'react';
 import './HomeStyle.scss';
 import InvoicesList from "../InvoicesList/InvoicesList";
 import {Link} from "react-router-dom";
+import useFetch from "../../utils/useFetch";
 
 
 const Home = () => {
-    const [invoices, setInvoices] = useState(null);
-    const [load, setLoad] = useState(true)
+    const {data: invoices, load,} = useFetch('http://localhost:8000/invoices')
 
-    const handleDelete = (id) => {
-        const newInvoices = invoices.filter(invoice => invoice._id !== id);
-        setInvoices(newInvoices);
-    }
-    useEffect(() => {
-            fetch(`http://localhost:8000/invoices`)
-                .then(response => {
-                    if(!response.ok){
-                        throw Error
-                    }
-                    return  response.json()
-                }).then(data => {
-                setInvoices(data)
-                setLoad(false)
-            }).catch(err => {
-                console.log(err.message)
-            })
-    },[])
     return (
         <div className="invoice_content">
             <div className="invoices_actions">
@@ -37,7 +19,7 @@ const Home = () => {
                 </div>
             </div>
             {load && <div>...Loading</div>}
-            {invoices && <InvoicesList invoices={invoices} handleDelete={handleDelete}/>}
+            {invoices && <InvoicesList invoices={invoices} />}
         </div>
     )
 }

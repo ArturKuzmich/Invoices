@@ -21,7 +21,6 @@ const CreateInvoice = () => {
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(invoice)
         }).then(() => {
-            console.log('added')
             setIsSubmit(false)
             history.push('/')
         })

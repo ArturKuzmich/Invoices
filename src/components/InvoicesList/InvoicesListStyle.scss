@@ -34,15 +34,6 @@
       display: table-cell;
       padding: 0 0 0 30px;
       vertical-align: middle;
-      &.item_actions{
-        text-align: center;
-        button{
-          color: red;
-          background: transparent;
-          outline: none;
-          cursor: pointer;
-        }
-      }
       &.item_comment{
         white-space: nowrap;
         overflow: hidden;
