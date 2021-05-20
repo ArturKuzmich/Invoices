@@ -4,20 +4,73 @@
   .create_form{
     border: 1px solid #eaeaea;
     padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    .create_vis{
-      width: 48%;
-      .input_field{
-        display: flex;
-        flex-direction: column;
-      }
-      &.vis_l{
+    .create_inner{
+      display: flex;
+      justify-content: space-between;
+      .create_vis{
+        width: 48%;
+        .input_field{
+          display: flex;
+          flex-direction: column;
+          margin: 0 0 35px 0;
+          label{
+            color: #9d9d9d;
+            margin: 0 0 10px 0;
+            font-weight: bold;
+          }
+          input{
+            border: 1px solid #f2f2f2;
+            outline: none;
+            color: #e2e2e2;
+            padding: 5px 10px;
+            &::placeholder{
+              color: #e2e2e2;
+            }
+          }
+        }
+        &.vis_l{
 
-      }
-      &.vis_r{
+        }
+        &.vis_r{
 
+        }
+      }
+    }
+    .create_comment{
+      display: flex;
+      flex-direction: column;
+      label{
+        margin: 0 0 10px 0;
+        font-weight: bold;
+        color: #9d9d9d;
+      }
+      textarea{
+        border: 1px solid #f2f2f2;
+        height: 100px;
+        outline: none;
+        padding: 20px;
+      }
+    }
+    .form_action-row{
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin: 25px 0 0 0;
+      button{
+        color: #ffffff;
+        padding: 10px 30px;
+        background: #4973ff;
+        font-weight: bold;
+        font-size: 18px;
+        cursor: pointer;
       }
     }
   }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
