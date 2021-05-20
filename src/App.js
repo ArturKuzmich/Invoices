@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import CreateInvoice from "./components/CreateInvoice/CreateInvoices";
 import InvoiceDetails from "./components/InvoiceDetails/InvoiceDetails";
+import UpdateInvoice from "./components/UpdateInvoice/UpdateInvoice";
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
                       </Route>
                       <Route path="/invoice/:id">
                           <InvoiceDetails />
+                      </Route>
+                      <Route path="/invoices/update/:id">
+                          <UpdateInvoice />
                       </Route>
                   </Switch>
               </div>

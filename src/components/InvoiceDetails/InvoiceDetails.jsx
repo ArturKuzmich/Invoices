@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams, useHistory } from 'react-router-dom'
+import { useParams, useHistory, Link } from 'react-router-dom'
 import './InvoiceDetailsStyle.scss';
 import useFetch from "../../utils/useFetch";
 
@@ -29,7 +29,7 @@ const InvoiceDetails =() => {
                         {invoices.comment}
                     </p>
                     <div className="invoice_row row_actions">
-                        <button className="action_btn">Edit</button>
+                        <Link  to={`/invoices/update/${invoices._id}`}  className="action_btn">Edit</Link>
                         <button className="action_btn" onClick={handleDelete}>Delete</button>
                     </div>
                 </div>
